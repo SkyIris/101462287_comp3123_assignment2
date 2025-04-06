@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Employees</h1>
+    <mat-form-field appearance="outline">
+        <mat-label> Username</mat-label>
+        <input type="text" matInput [formControl]="username" required/>
+        <mat-icon matSuffix>account_circle</mat-icon>
+        <mat-error *ngIf="username.invalid">{{usernameError()}}</mat-error>
+
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label> password</mat-label>
+        <input type="password" matInput [formControl]="password" required/>
+        <mat-icon matSuffix>lock</mat-icon>
+        <mat-error *ngIf="password.invalid">{{passwordError()}}</mat-error>
+
+    </mat-form-field>
+
+    <button mat-raised-button color="blue" (click)="onSubmit()">
+        {{submitLabel}}
+    </button>
+    </div>
