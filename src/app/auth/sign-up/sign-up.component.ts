@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthModule } from "../auth.module";
 import { AuthComponent } from "../auth.component";
+import {CreateUserGQL} from "../../../generated-types"
+import {APOLLO_OPTIONS} from 'apollo-angular';
 
 @Component({
   selector:'app-sign-up',
@@ -8,9 +10,14 @@ import { AuthComponent } from "../auth.component";
   templateUrl: './sign-up.component.html',
   styleUrl: './sign-up.component.css'
 })
-export class SignUpComponent {
+export class SignUpComponent implements OnInit{
 
-  signUp({username, password}: any)
-    {console.log(username, password);
+  constructor(private readonly createUserGql: CreateUserGQL){}
+
+  ngOnInit():void{}
+
+  signUp({username, password}: any){
+    this.createUserGql.mutate({createUserData:{username, password}})
+      .subscribe(()=>{});
   } 
 }

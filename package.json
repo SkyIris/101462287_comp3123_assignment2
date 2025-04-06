@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "generate": "graphql-codegen --watch",
     "serve:ssr:101462287_comp3133_assignment2": "node dist/101462287_comp3133_assignment2/server/server.mjs"
   },
   "private": true,
@@ -27,6 +28,8 @@
     "@graphql-codegen/schema-ast": "^4.1.0",
     "@graphql-codegen/typescript-apollo-angular": "^4.0.0",
     "@graphql-codegen/typescript-operations": "^4.6.0",
+    "@nestjs/common": "^11.0.13",
+    "@nestjs/core": "^11.0.13",
     "apollo-angular": "^10.0.3",
     "express": "^4.18.2",
     "graphql": "^16.10.0",
