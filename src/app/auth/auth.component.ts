@@ -5,6 +5,7 @@ import { NgIf } from '@angular/common';
 import {ReactiveFormsModule} from '@angular/forms'
 import {MatInputModule} from '@angular/material/input'
 import {MatIconModule} from '@angular/material/icon'
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-auth',
@@ -13,6 +14,8 @@ import {MatIconModule} from '@angular/material/icon'
   styleUrl: './auth.component.css'
 })
 export class AuthComponent {
+
+  
 
   @Output() onSubmitEvent = new EventEmitter<any>
   @Input() submitLabel: string;

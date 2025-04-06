@@ -1,6 +1,6 @@
 import {HttpLink} from 'apollo-angular/http';
 import {APOLLO_OPTIONS } from 'apollo-angular' 
-import { AppComponent } from './app/app.component';
+import { AppComponent } from './app.component';
 import { InMemoryCache } from '@apollo/client/core';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
