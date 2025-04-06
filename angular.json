@@ -65,10 +65,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "101462287_comp3133_assignment2:build:production"
+              "buildTarget": "101462287_comp3133_assignment2:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             },
             "development": {
-              "buildTarget": "101462287_comp3133_assignment2:build:development"
+              "buildTarget": "101462287_comp3133_assignment2:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
